@@ -62,33 +62,6 @@ namespace WcfCleverDevices
         }
 
         /// <summary>
-        /// Return the common characters in a and b using C#
-        /// </summary>
-        /// <param name="a">the first character string</param>
-        /// <param name="b">the second character string</param>
-        /// <returns>String of characters common to the two input. Return also the input parameters</returns>
-        public CommonCharacters GetCommonCharacterByCSharp(string a, string b)
-        {
-            CommonCharacters common = new CommonCharacters();
-            string ret = string.Empty;
-
-            for (int i = 0; i < a.Length; i++)
-                for (int j = 0; j < b.Length; j++)
-                {
-                    if (a[i] == b[j])
-                    {
-                        if (ret.IndexOf(a[i]) == -1 && a[i].ToString() != " ")
-                            ret += a[i];
-                        break;
-                    }
-                }
-            common.FirstString = a;
-            common.SecondString = b;
-            common.Common = ret;
-            return common;
-        }
-
-        /// <summary>
         /// Return the sentence where words are reversed using C#
         /// </summary>
         /// <param name="sentence"> a sentence consists of words</param>
@@ -121,6 +94,34 @@ namespace WcfCleverDevices
             }
             return count;
         }
+
+        /// <summary>
+        /// Return the common characters in a and b using C#
+        /// </summary>
+        /// <param name="a">the first character string</param>
+        /// <param name="b">the second character string</param>
+        /// <returns>String of characters common to the two input. Return also the input parameters</returns>
+        public CommonCharacters GetCommonCharacterByCSharp(string a, string b)
+        {
+            CommonCharacters common = new CommonCharacters();
+            string ret = string.Empty;
+
+            for (int i = 0; i < a.Length; i++)
+                for (int j = 0; j < b.Length; j++)
+                {
+                    if (a[i].ToString().ToUpper() == b[j].ToString().ToUpper())
+                    {
+                        if (ret.IndexOf(a[i].ToString(), StringComparison.OrdinalIgnoreCase) == -1 && a[i].ToString() != " ")
+                            ret += a[i];
+                        break;
+                    }
+                }
+            common.FirstString = a;
+            common.SecondString = b;
+            common.Common = ret;
+            return common;
+        }
+
 
         private bool isPrime(int number)
         {

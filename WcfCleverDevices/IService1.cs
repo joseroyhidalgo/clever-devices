@@ -23,13 +23,13 @@ namespace WcfCleverDevices
         CommonCharacters GetCommonCharacterBySql(string a, string b);
 
         [OperationContract]
-        CommonCharacters GetCommonCharacterByCSharp(string a, string b);
-
-        [OperationContract]
         Reverse ReverseWordsByCSharp(string sentence);
 
         [OperationContract]
         int CountPrimeByCSharp(long ceilingNumber);
+
+        [OperationContract]
+        CommonCharacters GetCommonCharacterByCSharp(string a, string b);
 
         // TODO: Add your service operations here
     }
