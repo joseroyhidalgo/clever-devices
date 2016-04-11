@@ -11,6 +11,7 @@
    * The three (3) Function in the Database1 project under Function folder should be executed.
      * fn_ReverseWords.sql
      * fn_IsPrime.sql
+       * hardcoding some values makes it faster.
      * fn_CommnCharacters.sql
    * One (1) Stored procedure in the Databse1 project under Stored Procedure folder should be executed.
      * GetPrimeCount.sql
