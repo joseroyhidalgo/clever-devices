@@ -11,10 +11,10 @@
    * The three (3) Function in the Database1 project under Function folder should be executed
      * fn_ReverseWords.sql
      * fn_IsPrime.sql
-        1. hardcoding some values makes the search faster
+        1. hardcoding some values makes the searching faster
         2. using combination of stored procedure calling function makes the codes cleaner and reusable
      * fn_CommnCharacters.sql
-   * One (1) Stored procedure in the Databse1 project under Stored Procedure folder should be executed
+   * One (1) Stored procedure in the Database1 project under Stored Procedure folder should be executed
      * GetPrimeCount.sql
 
 #### Highlights:
